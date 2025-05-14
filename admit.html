@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admit Card List Lucknow University</title>
+    <link rel="icon" href="/apps/Content/images/LU_Title_Logo.jpg" type="image/x-icon">
+    <link href="/apps/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/apps/Content/css/font-awesome.css" rel="stylesheet">
+    <link href="/apps/Content/css/icon-font.min.css" rel="stylesheet">
+    <link href="/apps/Content/css/style.css" rel="stylesheet">
+    <link href="/apps/Content/css/datepicker.css" rel="stylesheet">
+    <link href="/apps/Content/css/sweetalert.css" rel="stylesheet" />
+    <link href="/apps/Content/css/sweetalert_c.css" rel="stylesheet" />
+    <script src="/apps/Content/js/jquery-1.10.2.min.js"></script>
+    <script src="/apps/Content/js/sweetalert_c.min.js"></script>
+    
+    <script src="/apps/Content/js/sweetalert2011.js"></script>
+    <script src="/apps/Content/js/sweetalert.js"></script>
+    <script src="/apps/Content/js/sweetalert.min.js"></script>
+    <script src="/apps/Content/js/sweetalert.js"></script>
+    <script src="/apps/Content/js/Common.js"></script>
+    <style>
+        .page-wrapper {
+            min-height: calc(100vh - 100px);
+        }
+
+        .main-content {
+            margin-left: 0;
+        }
+
+        .profile_details_left {
+            margin: 0.45em 0 1em 1em;
+        }
+
+        .sticky-header .logo {
+            border-bottom: 1px solid #ffa034;
+            box-shadow: 1px 0 3px rgba(0,0,0,.15);
+            -webkit-box-shadow: 1px 0 3px rgba(0,0,0,.15);
+            -moz-box-shadow: 1px 0 3px rgba(0,0,0,.15);
+            -o-box-shadow: 1px 0 3px rgba(0,0,0,.15);
+        }
+
+        .exambox {
+            position: relative;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+            margin-bottom: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-image: url(../Content/images/corner-1.png);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: contain;
+            border: 1px solid #a58e1c;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .exambox .exmtype {
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+            }
+
+            .exambox label {
+                font-size: 1rem;
+            }
+
+        .impnot {
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #a78f2f !important;
+            box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+            min-height: calc(100vh - 170px);
+        }
+
+        .impnot1 {
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #a78f2f !important;
+            box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+            min-height: calc(100vh - 170px);
+        }
+
+        .impnot .btn-lg {
+            padding: 8px 8px;
+            font-size: 16px;
+        }
+
+        .cpatcha {
+            background-color: #fff;
+            display: inline-block;
+            padding: 3px;
+            border: 2px solid #ccc;
+        }
+        .notebox ol li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="sticky-header">
+    <section class="main-content">
+        <header class="header-section">
+            <div class="logo">
+                <a href="#" tabindex="0">
+                    <img src="/apps/Content/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="menu-right">
+                <div class="user-panel-top">
+                    <div class="profile_details_left">
+                        <ul class="nofitications-dropdown">
+                            <li>
+                                
+                                Even Semester Examination Form/सम सेमेस्टर परीक्षा फॉर्म – Session/सत्र (2024-25)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+
+
+
+<div class="page-wrapper">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Admit Card List for Session/सत्र (2024-25)</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+<form action="/apps/Public/AdmitCardList" id="FilterApproveExmFrm" method="post">                                <div class="row">
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Roll No. / Lurn No.<span class="red">*</span></label>
+                                            <input autocomplete="off" class="form-control validate required" id="RollNo" name="RollNo" placeholder="Enter your Rollno / LURN No" tabindex="0" type="text" value="" />
+                                            <span id="RequiredFieldValidator1" style="color:Red;display:none;">Required !</span>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label class="btn-block">Captcha/कैप्चा</label>
+                                            <div class="">
+                                                <img src='/apps/Public/GetCaptchaimage' id="imgCaptcha" alt="Captcha" title="Captcha">
+                                                <a href="#" class="refreshbtn" title="Refresh Captcha" onclick="RefreshCaptcha()"><i class="fa fa-refresh"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label>Enter Captcha/कैप्चा भरें <b class="red"> *</b></label>
+                                            <input class="form-control" id="Captcha" maxlength="5" name="Captcha" type="text" value="" />
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Captcha" data-valmsg-replace="true" style="font-size:13px;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label><span class="red"></span></label>
+                                            <button id="btnSearch" type="submit" class="btn btn-primary btn-block validate">Submit</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label><span class="red"></span></label>
+                                            <a class="btn btn-danger btn-block" onclick="Reset()"><b>Reset</b></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+</form>                            <hr />
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered datatable">
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+     function RefreshCaptcha() {
+        var img = document.getElementById("imgCaptcha");
+        img.src = '/apps/Public/GetCaptchaimage' + "?query=" + Math.random();
+    }
+var message = '';
+var messageStatus = '';
+var messagemidStatus = '';
+if (message)
+        sweetAlert({ title: message, text: messagemidStatus, type: messageStatus, html: true });
+
+      function Reset() {
+        window.location.href = '/apps/Public/AdmitCardList';
+    }
+</script>
+
+    </section>
+    <footer>
+        <div class="">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <a href="#" target="blank" tabindex="0">Refund Policy</a> |  <a href="#" target="blank" tabindex="0">Terms &amp; Conditions</a> | <a href="#" target="blank" tabindex="0">Privacy Policy </a>
+                </div>
+                <div class="col-md-6 hidden-xs hidden-sm text-right">
+                    <span class="updated">
+                        ©<a href="http://www.lkouniv.ac.in/" target="_blank">University of Lucknow </a> | All Rights Reserved
+                        <br>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal-loading" data-backdrop="static" style="margin-top:20%;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function waitStart() {
+            $('#modal-loading').modal('show');
+        }
+        function waitComplete() {
+            $('#modal-loading').modal('hide');
+        }
+    </script>
+
+
+
+    
+    <script src="/apps/Content/js/bootstrap.min.js"></script>
+    <script src="/apps/Content/js/datepicker.js"></script>
+    <script src="/apps/Content/js/datepicker.en.js"></script>
+    <script src="/apps/Content/js/jquery.nicescroll.js"></script>
+    <script src="/apps/Content/js/scripts.js"></script>
+</body>
+</html>
