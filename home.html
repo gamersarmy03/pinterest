@@ -43,8 +43,10 @@
         <div class="flex justify-center">
             <div class="w-full max-w-4xl">
                 <div class="video-container">
-                    <video id="video-id" class="rounded-lg shadow-lg">
-                        <source src="video.mp4" type="video/mp4" />
+                    <video id="video-id" class="rounded-lg shadow-lg" poster="">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm" type="video/webm" />
+                        Your browser does not support the video tag or the file cannot be loaded.
                     </video>
                 </div>
                 <h2 class="mt-4 text-xl font-medium">NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode</h2>
@@ -97,7 +99,7 @@
                     "playbackRateEnabled": true,
                     "allowDownload": false,
                     "playButtonShowing": true,
-                    "fillToContainer": false,
+                    "fillToContainer": true,
                     "posterImage": ""
                 },
                 "vastOptions": {
