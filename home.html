@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube-Like Home Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 9/16 = 0.5625 for 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Navigation Bar -->
@@ -25,7 +41,9 @@
         <h1 class="text-2xl font-semibold mb-4">Featured Video</h1>
         <div class="flex justify-center">
             <div class="w-full max-w-4xl">
-                <iframe width="928" height="522" src="https://www.youtube.com/embed/oYp1vB9xN9U" title="NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full rounded-lg shadow-lg"></iframe>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/oYp1vB9xN9U" title="NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                </div>
                 <h2 class="mt-4 text-xl font-medium">NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode</h2>
                 <p class="text-gray-600 mt-2">Enjoy the latest episode of Taarak Mehta Ka Ooltah Chashmah, featuring Jetha's successful plan!</p>
             </div>
