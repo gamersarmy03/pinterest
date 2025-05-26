@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube-Like Home Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <style>
         .video-container {
             position: relative;
@@ -13,7 +14,7 @@
             height: 0;
             overflow: hidden;
         }
-        .video-container iframe {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -42,7 +43,9 @@
         <div class="flex justify-center">
             <div class="w-full max-w-4xl">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/oYp1vB9xN9U" title="NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                    <video id="video-id" class="rounded-lg shadow-lg">
+                        <source src="video.mp4" type="video/mp4" />
+                    </video>
                 </div>
                 <h2 class="mt-4 text-xl font-medium">NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode</h2>
                 <p class="text-gray-600 mt-2">Enjoy the latest episode of Taarak Mehta Ka Ooltah Chashmah, featuring Jetha's successful plan!</p>
@@ -71,5 +74,39 @@
             </div>
         </div>
     </div>
+
+    <!-- Fluid Player Script -->
+    <script>
+        var myFP = fluidPlayer(
+            'video-id', {
+                "layoutControls": {
+                    "controlBar": {
+                        "autoHideTimeout": 3,
+                        "animated": true,
+                        "autoHide": true
+                    },
+                    "htmlOnPauseBlock": {
+                        "html": null,
+                        "height": null,
+                        "width": null
+                    },
+                    "autoPlay": false,
+                    "mute": true,
+                    "allowTheatre": true,
+                    "playPauseAnimation": true,
+                    "playbackRateEnabled": true,
+                    "allowDownload": false,
+                    "playButtonShowing": true,
+                    "fillToContainer": false,
+                    "posterImage": ""
+                },
+                "vastOptions": {
+                    "adList": [],
+                    "adCTAText": false,
+                    "adCTATextPosition": ""
+                }
+            }
+        );
+    </script>
 </body>
 </html>
