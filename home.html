@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube-Like Home Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <style>
         .video-container {
             position: relative;
@@ -14,7 +13,7 @@
             height: 0;
             overflow: hidden;
         }
-        .video-container video {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -43,12 +42,7 @@
         <div class="flex justify-center">
             <div class="w-full max-w-4xl">
                 <div class="video-container">
-                    <video id="video-id" class="rounded-lg shadow-lg">
-                        <!-- Placeholder MP4 for testing; replace with your video.mp4 -->
-                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm" type="video/webm" />
-                        Your browser does not support the video tag or the file cannot be loaded.
-                    </video>
+                    <iframe src="https://www.youtube.com/embed/oYp1vB9xN9U" title="NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-lg shadow-lg"></iframe>
                 </div>
                 <h2 class="mt-4 text-xl font-medium">NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode</h2>
                 <p class="text-gray-600 mt-2">Enjoy the latest episode of Taarak Mehta Ka Ooltah Chashmah, featuring Jetha's successful plan!</p>
@@ -56,65 +50,27 @@
         </div>
 
         <!-- Suggested Videos Placeholder -->
-        <div class="mt-8">
-            <h2 class="text-xl font-semibold mb-4">Suggested Videos</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <div class="bg-gray-300 h-40 rounded mb-2"></div>
-                    <p class="font-medium">Video Title 1</p>
-                    <p class="text-sm text-gray-500">Channel Name</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <div class="bg-gray-300 h-40 rounded mb-2"></div>
-                    <p class="font-medium">Video Title 2</p>
-                    <p class="text-sm text-gray-500">Channel Name</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <div class="bg-gray-300 h-40 rounded mb-2"></div>
-                    <p class="font-medium">Video Title 3</p>
-                    <p class="text-sm text-gray-500">Channel Name</p>
-                </div>
-            </div>
+        <div class="suggested-videos">
+    <h2>Suggested Videos</h2>
+    <div class="video-grid">
+        <!-- New Suggested Video -->
+        <div class="video-card">
+            <iframe width="928" height="522" src="https://www.youtube.com/embed/oKKIh8GMDRI" title="Vikramgarh Ke Raja | Dhruv Tara -Samay Sadi Se Pare | Ep 144 | Full Episode | 12 Aug 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Vikramgarh Ke Raja | Dhruv Tara - Samay Sadi Se Pare | Ep 144</h3>
+            <p>Sony SAB</p>
+        </div>
+        <!-- Retaining the other two placeholder videos -->
+        <div class="video-card">
+            <div class="thumbnail"></div>
+            <h3>Video Title 2</h3>
+            <p>Channel Name</p>
+        </div>
+        <div class="video-card">
+            <div class="thumbnail"></div>
+            <h3>Video Title 3</h3>
+            <p>Channel Name</p>
         </div>
     </div>
-
-    <!-- Fluid Player Script -->
-    <script>
-        var myFP = fluidPlayer(
-            'video-id', {
-                "layoutControls": {
-                    "controlBar": {
-                        "autoHideTimeout": 3,
-                        "animated": true,
-                        "autoHide": true
-                    },
-                    "htmlOnPauseBlock": {
-                        "html": null,
-                        "height": null,
-                        "width": null
-                    },
-                    "autoPlay": false,
-                    "mute": true,
-                    "allowTheatre": true,
-                    "playPauseAnimation": true,
-                    "playbackRateEnabled": true,
-                    "allowDownload": false,
-                    "playButtonShowing": true,
-                    "fillToContainer": false,
-                    "posterImage": "https://i.ytimg.com/vi/oYp1vB9xN9U/hqdefault.jpg"
-                },
-                "vastOptions": {
-                    "adList": [],
-                    "adCTAText": false,
-                    "adCTATextPosition": ""
-                }
-            }
-        );
-        // Add error handling
-        document.getElementById('video-id').addEventListener('error', function(e) {
-            console.error('Video failed to load:', e);
-            alert('Failed to load video. Please check the video source or network connection.');
-        });
-    </script>
+</div>
 </body>
 </html>
