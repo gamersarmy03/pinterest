@@ -14,7 +14,6 @@
             height: 0;
             overflow: hidden;
         }
-        .video-container iframe,
         .video-container video {
             position: absolute;
             top: 0;
@@ -44,16 +43,12 @@
         <div class="flex justify-center">
             <div class="w-full max-w-4xl">
                 <div class="video-container">
-                    <!-- Revert to YouTube iframe since video.mp4 isn't working -->
-                    <iframe src="https://www.youtube.com/embed/oYp1vB9xN9U" title="NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="rounded-lg shadow-lg"></iframe>
-                    <!-- Commenting out Fluid Player for now; uncomment and update source when video.mp4 is fixed -->
-                    <!--
-                    <video id="video-id" class="rounded-lg shadow-lg" poster="https://i.ytimg.com/vi/oYp1vB9xN9U/hqdefault.jpg">
-                        <source src="video.mp4" type="video/mp4" />
+                    <video id="video-id" class="rounded-lg shadow-lg">
+                        <!-- Placeholder MP4 for testing; replace with your video.mp4 -->
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
                         <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm" type="video/webm" />
                         Your browser does not support the video tag or the file cannot be loaded.
                     </video>
-                    -->
                 </div>
                 <h2 class="mt-4 text-xl font-medium">NEW Episode | Jetha's Successful Plan - Taarak Mehta Ka Ooltah Chashmah - Ep 3377 - Full Episode</h2>
                 <p class="text-gray-600 mt-2">Enjoy the latest episode of Taarak Mehta Ka Ooltah Chashmah, featuring Jetha's successful plan!</p>
@@ -83,8 +78,7 @@
         </div>
     </div>
 
-    <!-- Fluid Player Script (commented out for now) -->
-    <!--
+    <!-- Fluid Player Script -->
     <script>
         var myFP = fluidPlayer(
             'video-id', {
@@ -106,7 +100,7 @@
                     "playbackRateEnabled": true,
                     "allowDownload": false,
                     "playButtonShowing": true,
-                    "fillToContainer": true,
+                    "fillToContainer": false,
                     "posterImage": "https://i.ytimg.com/vi/oYp1vB9xN9U/hqdefault.jpg"
                 },
                 "vastOptions": {
@@ -122,6 +116,5 @@
             alert('Failed to load video. Please check the video source or network connection.');
         });
     </script>
-    -->
 </body>
 </html>
